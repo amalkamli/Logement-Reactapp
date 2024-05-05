@@ -23,7 +23,9 @@ const NotFoundPage = () => {
 </p>
 <Link to="/"className="return-link">Retourner sur la page d'accueil</Link>
     </div>
+<div className ='footernotfoud'>
     <Footer />
+  </div>
     </div>
 
   )

@@ -23,19 +23,18 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.nav-links, .nav-links2, .nav-links-CARDID {
+.nav-links, .nav-links2 {
   position: absolute;
   top: 0;
   right: 30px;
   margin-top: 20px; 
 }
- 
-.nav-links ul, .nav-links2 ul, .nav-links-ul-CARDID {
+.nav-links ul, .nav-links2 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.nav-links ul li, .nav-links2 ul li, .li-CARDID {
+.nav-links ul li, .nav-links2 ul li {
   display: inline-block;
   margin-left: 40px; /* Espacement entre les liens */
 }
@@ -59,7 +58,7 @@ body {
   margin-left: 20px;
 }
 .conteneur {
-  background-image: url('./Composants/images/Background.png'); /* le chemin de l'image */
+  background-image: url('./Composants/images/Background.png');
   background-size: cover; /* Pour couvrir entièrement le conteneur */
   margin-top: 10%;
   background-position: center; /* Pour centrer l'image */
@@ -67,10 +66,7 @@ body {
   color: white; /* Couleur du texte */
   text-align: center; /* Centrage horizontal du texte */
   margin-left: 5px;
-  border-radius: 10px;
-} 
-.background {
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 .conteneur-about {
   background-image: url('./Composants/images/BackgroundAbout.png');
@@ -169,17 +165,17 @@ a.card-link {
 }
 .QuatrecentQuatre {
 margin-top: 10%;
-margin-bottom: 10%;
-margin-left: 30%;
+margin-bottom: 1%;
+margin-left: 40%;
+width: 250px;
 }
 .text {
   color: #FF6060;
-  margin-left: 40%;
-  margin-bottom: 10%;
+  margin-left: 35%;
 }
 .return-link {
   color: black;
-  margin: 40%;  
+  margin-left: 40%;
 }
 .title-slides {
   color: #ff6060;
@@ -214,7 +210,6 @@ margin-left: 30%;
   margin: 1%;
   width: 100%;
 }
-
 .slideshow-imgcontainer {
   height: 415px;
   width: 100%;
@@ -235,7 +230,7 @@ margin-left: 30%;
   width: 95%;
   display: flex;
   justify-content: space-between;
-  z-index: 3; /* Assurez-vous que les flèches sont affichées au-dessus des images */
+  z-index: 3; /*les flèches sont affichées au-dessus des images */
 }
 .arrow-button {
   background: transparent;
@@ -243,14 +238,23 @@ margin-left: 30%;
   cursor: pointer;
 }
 .arrow_left, .arrow_right {
-  height: 45px;
+  height: 40px;
   margin-bottom: 180px;
+}
+.arrow_left {
+  margin-left: 20px;
+}
+.arrow_right {
+  margin-right: 5px;
 }
 .CARDID-header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+}
+.nav-links-CARDID {
+  display: flex;
 }
 .slideshow-Slidecontainer {
     align-items: center;
@@ -298,14 +302,101 @@ margin-left: 30%;
 .conteneur-footer {
   display: flex;
   justify-content: center;
+  margin-left: 0%;
 }
-@media (max-width: 1024px) {
-  .card-list {
-   display:flex;
-   flex-wrap: wrap;
+.nav-links-ul-CARDID {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+}
+.li-CARDID {
+  margin-right: 20px; 
+}
+.nav-link {
+  text-decoration: none; 
+  color: black; 
+}
+.footernotfoud {
+  position: fixed;
+  bottom: 0%;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    overflow: hidden; /* Hide vertical and horizontal scroll bars */
   }
-  .nav-links {
-    size: 50px;
+  .card-list {
+  grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Deux cartes par ligne pour les tablettes en mode paysage */
+  margin-top: 8%;
+  margin-left: 3%;
+  margin-bottom: 25%; 
+  }
+  .nav-links ul li a, .nav-links2 {
+    display: flex;
+    font-size: 24px;
+  }
+  .conteneur {
+    margin-top: 13%;
+    width: 90%;
+  }
+  .footer-about {
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+  }
+  .Aboutcollapse {
+    margin-top: 5%;
+  }
+  .conteneur .background {
+     width: 105%;
+     border-radius: 15px;
+     margin-right: 5px;
+  }
+  .conteneur-about {
+    margin-top: 15%;
+  }
+  .conteneur-about {
+    width: 95%;
+  }
+  .background-about {
+    width: 100%;
+  }
+  .conteneur-footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .footercardid {
+    position: fixed;
+    display: flex;
+    justify-content: center; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+ }
+ .nav-links-ul-CARDID {
+  font-size: 24px;
+ }
+  }
+@media (max-width: 768px) {
+  .card-list {
+    display: flex;
+    flex-direction: column; /* Aligner les cartes verticalement */
+    justify-content: center; /* Centrer les cartes verticalement */
+    align-items: center; /* Centrer les cartes horizontalement */
+  }
+  .card {
+    width: 90%; 
+    margin-bottom: 20px; 
+  }
+  .footer-about {
+    position: relative;
+    margin-top: 28%;
+  }
+  .footernotfoud {
+    position: relative;
+    margin-top: 75%;
   }
   
 }

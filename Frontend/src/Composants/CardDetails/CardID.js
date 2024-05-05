@@ -181,7 +181,9 @@ const CardID = () => {
         </div>
       </div>
 
-     <Footer />
+  <div className="footercardid">  
+   <Footer />
+   </div>
     </div>
   );
 };

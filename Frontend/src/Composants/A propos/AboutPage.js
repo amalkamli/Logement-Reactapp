@@ -32,7 +32,7 @@ const AboutPage = () => {
           </ul>
         </nav>
         <div className="conteneur-about"> 
-          <img className="background-about" src={Background} alt='background' />
+        <img className="background-about" src={Background} alt='background' />
         </div>
       </div>
 
