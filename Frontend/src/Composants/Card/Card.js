@@ -1,12 +1,16 @@
 import React from 'react';
-
-
-function Card({ title, imageUrl, onClick }) {
+import '../Card/Card.css';
+const Card = ({ title, imageUrl }) => {
   return (
-    <div className="card" onClick={onClick}>
-      <img src={imageUrl} alt={title} />
-      <h4>{title}</h4>
+    <div className="card">
+      <div className="image-container">
+        <img src={imageUrl} alt={title} className="card-image" />
+        <div className="title-overlay">
+          <h2 className="card-title">{title}</h2>
+        </div>
+      </div>
     </div>
   );
 }
+
 export default Card;

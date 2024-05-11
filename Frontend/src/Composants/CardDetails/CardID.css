@@ -1,0 +1,31 @@
+.pictContainer {
+    background: #c4c4c4;
+    border-radius: 90%;
+    }
+  .hostpic {
+    border-radius: 90%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+  }
+  .host-slide {
+    margin-top: -5%;
+    margin-right: 5%;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hostname {
+    color: #ff6060;
+    display: flex;
+    font-size: 18px;
+    line-height: 1.3;
+    padding-right: 10px;
+    text-align: right;
+  }
+  .CollapseID {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+  }
+  

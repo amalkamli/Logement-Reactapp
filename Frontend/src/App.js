@@ -1,14 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import '../src/App.css';
 import AboutPage from './Composants/A propos/AboutPage';
 import Header from './Composants/Header/Header';
 import CardList from './Composants/CardList/CardList';
 import Footer from './Composants/Footer/Footer';
 import NotFoundPage from './Composants/404/NotFoundPage';
-import CardID from './Composants/CardDetails/CardID';
-import PropertyDetails from './Composants/CardIdWrong/CardidWrong';
-
-
+import FalseDetails from './Composants/FalseDetails/FalseDetails';
+import PropertyDetails from './Composants/PropertyDetails/PropertyDetails';
 function App() {
   
     return (
@@ -18,15 +15,14 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<HomePage />} />       
           <Route path="/cards" element={<CardList />} />
-          <Route path="/details/:id" element={<CardID />} /> {/* Route pour le composant CardID */}
-          <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/details/:id" element={<PropertyDetails />} /> {/* Route pour le composant CardID */}
+          <Route path="/property/:id" element={<FalseDetails />} />
           <Route path="*" element={<NotFoundPage />} />  {/* Route pour la page 404 */}
        </Routes>     
       </div>
     </Router>
   );
 }
-
 function HomePage() {
   return (
     <div>

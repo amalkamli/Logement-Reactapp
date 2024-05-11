@@ -1,0 +1,43 @@
+.card-list {
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cartes de largeur minimum de 300px, avec une fraction flexible de l'espace disponible */
+    grid-gap: 50px; /* Espacement entre les cartes */
+    justify-content: space-around;
+    margin-top: 3%;
+  }
+  .card {
+    width: calc(90.33% - 10px); /* Pour occuper 33.33% de largeur avec un espacement de 10px entre les éléments */
+    margin-bottom: 20px; /* Espacement entre les lignes */
+    margin-top: 5%;
+    box-sizing: border-box; /* Pour inclure la largeur de la bordure dans le calcul */
+    color: aliceblue;
+    border-radius: 10px;
+  }
+  a.card-link {
+    text-decoration: none; 
+    color: inherit; /* Utiliser la couleur de texte par défaut */
+    display: flex;
+  }
+  .card img {
+    width: 100%;
+    height: auto; /* Pour conserver les proportions de l'image */
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 1024px) {
+    .card-list {
+        grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Deux cartes par ligne pour les tablettes en mode paysage */
+        margin-top: 8%;
+        margin-left: 3%;
+        margin-bottom: 25%; 
+        }
+  }
+  @media (max-width: 768px) {
+    .card-list {
+        grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Deux cartes par ligne pour les tablettes en mode paysage */
+
+      justify-content: center; /* Centrer les cartes verticalement */
+      align-items: center; /* Centrer les cartes horizontalement */
+    }
+}

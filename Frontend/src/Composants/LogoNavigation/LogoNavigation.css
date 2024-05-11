@@ -1,0 +1,22 @@
+.logo-navigation {
+  margin: 20px;
+}
+.nav-links {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  margin-top: 20px;
+}
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.nav-links ul li a {
+    text-decoration: none;
+    color: black;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../CardList/Cardlist.css';
 import { Link } from 'react-router-dom';
 import Card from '../Card/Card';
 
