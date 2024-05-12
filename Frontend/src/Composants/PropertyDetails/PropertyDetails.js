@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import CardID from "../CardDetails/CardID";
 import Slider from "../Slider/Slider";
 import LogoNavigation from "../LogoNavigation/LogoNavigation";
@@ -7,29 +7,45 @@ import LogoNavigation from "../LogoNavigation/LogoNavigation";
 const PropertyDetails = () => {
   const { id } = useParams();
   const [property, setProperty] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    fetchPropertyDetails(id);
+  }, [id]);
+
+  const fetchPropertyDetails = (id) => {
     fetch(`http://localhost:8080/api/properties/${id}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          // If response is not ok, redirect to NotFoundPage
+          navigate('/notfoundpage');
+          return null;
+        }
+        return response.json();
+      })
       .then((data) => {
-        setProperty(data);
+        if (data) {
+          setProperty(data); // Store property details in state
+        }
       })
       .catch((error) =>
         console.error("Error fetching property details:", error)
       );
-  }, [id]);
+  };
+
+  // If property is not loaded yet, return null to prevent rendering
+  if (property === null) {
+    return null;
+  }
 
   return (
     <div>
-         <LogoNavigation />
-      {property ? (
-        <>
+      <LogoNavigation />
+      {/* Render property details */}
+      <>
         <Slider property={property} />
         <CardID property={property} />
-        </>
-      ) : (
-        <div>Loading...</div>
-      )}
+      </>
     </div>
   );
 };
