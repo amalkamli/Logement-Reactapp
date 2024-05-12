@@ -35,8 +35,8 @@
   }
   @media (max-width: 768px) {
     .card-list {
-        grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Deux cartes par ligne pour les tablettes en mode paysage */
-
+      grid-template-columns: repeat(1, minmax(300px, 1fr)); /* Deux cartes par ligne pour les tablettes en mode paysage */
+      background-color:white;
       justify-content: center; /* Centrer les cartes verticalement */
       align-items: center; /* Centrer les cartes horizontalement */
     }
