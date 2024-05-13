@@ -22,7 +22,7 @@
   }
   .card img {
     width: 100%;
-    height: auto; /* Pour conserver les proportions de l'image */
+    height: 340px; 
     border-radius: 10px;
   }
   @media screen and (max-width: 1024px) {

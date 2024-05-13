@@ -14,8 +14,35 @@
 bottom: 0%;
 }
 @media (max-width: 768px) {
-
 .footernotfound {
-  margin-top: 3%;
+  margin-top: 8% !important;
 }
+.QuatrecentQuatre {
+margin-top: 20%;
+}
+.text {
+  font-size: 25px;
+  padding: 100px;
+  padding-left: 3%;
+}
+  .return-link {
+    font-size: 25px;
+    margin: 25%;
+  }
+}
+
+@media (max-width: 1024px) {
+.footernotfound {
+  margin-top: 48%;
+}
+.mainNotFound {
+  margin-top: 10%;
+}
+.logo-navigation {
+  margin: 20px;
+}
+.nav-links {
+  font-size: 200%;
+}
+
 }

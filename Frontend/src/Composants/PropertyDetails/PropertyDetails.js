@@ -11,7 +11,7 @@ const PropertyDetails = () => {
 
   useEffect(() => {
     fetchPropertyDetails(id);
-  }, [id]);
+  }, );
 
   const fetchPropertyDetails = (id) => {
     fetch(`http://localhost:8080/api/properties/${id}`)

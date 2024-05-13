@@ -44,14 +44,14 @@ const Slider = () => {
         <div className="arrows">
           <button onClick={prevImage} className="arrow-button">
             <img
-              className="arrow_left"
+              className="arrow-button-left"
               src={Arrow1}
               alt="Flèche gauche"
             />
           </button>
           <button onClick={nextImage} className="arrow-button">
             <img
-              className="arrow_right"
+              className="arrow-button-right"
               src={Arrow2}
               alt="Flèche droite"
             />

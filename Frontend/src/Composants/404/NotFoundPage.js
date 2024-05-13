@@ -10,7 +10,6 @@ const NotFoundPage = () => {
    <>
       <LogoNavigation />
   
-    
     <div className="mainNotFound">
        <img className="QuatrecentQuatre" src={NotFound} alt='NotFound' />
        <p className='text'>Oups ! La page que vous demandez n'existe pas.

@@ -5,8 +5,8 @@ const Card = ({ title, imageUrl }) => {
     <div className="card">
       <div className="image-container">
         <img src={imageUrl} alt={title} className="card-image" />
-        <div className="title-overlay">
-          <h2 className="card-title">{title}</h2>
+        <div className="title-overlay"><h2 className="card-title">{title}</h2>
+          
         </div>
       </div>
     </div>

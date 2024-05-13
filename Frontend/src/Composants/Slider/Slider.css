@@ -1,4 +1,5 @@
 .slideshow-imgcontainer {
+  position: relative;
     height: 415px;
     width: 100%;
    }
@@ -13,7 +14,7 @@
   }
   .arrows {
     position: absolute;
-    top: 80%;
+    top: 60%;
     transform: translateY(-50%);
     width: 95%;
     display: flex;
@@ -25,14 +26,16 @@
     border: none;
     cursor: pointer;
   }
-  .arrow_left, .arrow_right {
+  .arrow-button-left, .arrow-button-right {
     height: 40px;
     margin-bottom: 180px;
   }
-  .arrow_left {
+  .arrow-button-left {
+    position: absolute;
     margin-left: 20px;
   }
-  .arrow_right {
+  .arrow-button-right {
+    position: absolute;
     margin-right: 3px;
   }
   .Slideshow_numbers {
@@ -43,9 +46,16 @@
     position: absolute;
     right: 50%;
   } 
+  .slideshow-Slidecontainer {
+    position: relative;
+  }
   @media (max-width: 768px) {
+
     .Slideshow_numbers {
       display: none;
     }
     
+  }
+  @media (max-width: 1024px) {
+  
   }

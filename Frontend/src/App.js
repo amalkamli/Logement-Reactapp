@@ -4,7 +4,6 @@ import Header from './Composants/Header/Header';
 import CardList from './Composants/CardList/CardList';
 import Footer from './Composants/Footer/Footer';
 import NotFoundPage from './Composants/404/NotFoundPage';
-import FalseDetails from './Composants/FalseDetails/FalseDetails';
 import PropertyDetails from './Composants/PropertyDetails/PropertyDetails';
 function App() {
   
@@ -16,7 +15,6 @@ function App() {
           <Route path="/" element={<HomePage />} />       
           <Route path="/cards" element={<CardList />} />
           <Route path="/details/:id" element={<PropertyDetails />} /> {/* Route pour le composant CardID */}
-          <Route path="/property/:id" element={<FalseDetails />} />
           <Route path="*" element={<NotFoundPage />} />  {/* Route pour la page 404 */}
        </Routes>     
       </div>

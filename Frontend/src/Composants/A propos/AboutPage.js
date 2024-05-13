@@ -41,8 +41,9 @@ const AboutPage = () => {
           />
         </div>
       </div>
-
+<div className="footer-about">
       <Footer />
+      </div>
     </div>
   );
 };
