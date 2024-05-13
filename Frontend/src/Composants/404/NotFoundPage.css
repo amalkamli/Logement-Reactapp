@@ -1,14 +1,17 @@
 .QuatrecentQuatre {
-  margin-left: 40%;
-  width: 250px;
+  font-size: 50px;
+  display: block;
+margin-left: 25%;
 }
 .text {
   color: #ff6060;
   margin-left: 35%;
+  margin-bottom: 10%;
 }
 .return-link {
   color: black;
   margin-left: 40%;
+  margin-bottom: 10%;
 }
 .conteneur-footer {
 bottom: 0%;

@@ -32,17 +32,20 @@ const Slider = () => {
   };
 
   // Fonction pour afficher l'image précédente
-  const prevImage = () => {
-    if (property && property.pictures && currentImageIndex > 0) {
-      setCurrentImageIndex(currentImageIndex - 1);
+
+  const previousImage = () => {
+    if (property && property.pictures) {
+      setCurrentImageIndex((currentImageIndex) => 
+        currentImageIndex === 0 ? property.pictures.length - 1 : currentImageIndex - 1);
     }
   };
-
+  
+  
   return (
     <div className="slideshow-Slidecontainer">
       {property && property.pictures && property.pictures.length > 1 && (
         <div className="arrows">
-          <button onClick={prevImage} className="arrow-button">
+          <button onClick={previousImage} className="arrow-button">
             <img
               className="arrow-button-left"
               src={Arrow1}

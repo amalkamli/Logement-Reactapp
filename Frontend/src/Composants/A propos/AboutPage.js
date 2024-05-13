@@ -15,7 +15,7 @@ const AboutPage = () => {
         <Banner backgroundImg={BackgroundAbout} />
       </div>
 
-      <div className="collapseContainer">
+      <div className="collapseContainer-about">
         <div className="collapseWrapper">
           <Collapse
             title="Fiabilité"

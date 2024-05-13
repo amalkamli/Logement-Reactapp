@@ -1,13 +1,10 @@
-.pictContainer {
-  background: #c4c4c4;
-  border-radius: 90%;
-}
+
 .hostpic {
   border-radius: 90%;
   object-fit: cover;
   height: 50px;
   width: 50px;
-  margin-top: 5px;
+  
 }
 .host-slide {
   margin-top: -5%;
@@ -28,6 +25,9 @@
   display: flex;
   width: 100%;
   margin-top: 5%;
+  margin-left: 0%;
+  margin-bottom: 5%;
+  gap: 60px; 
 }
 .rating {
   color: #ff6060;
@@ -35,18 +35,23 @@
   justify-content: flex-end;
   margin-right: 5%;
   height: 1px;
-  margin-top: 20px;
-  font-size: 25px;
+  font-size: 30px;
 }
 @media (max-width: 768px) {
   .CollapseID {
     display: flex;
     flex-direction: column;
   }
-  
-  
   .rating {
     justify-content: flex-start;
+    margin: 3%;
   }
-
+  .host-slide {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 1024px) {
+  .footerID {
+    margin-top: 10%;
+  }
 }

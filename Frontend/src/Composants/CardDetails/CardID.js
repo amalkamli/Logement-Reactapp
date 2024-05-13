@@ -24,40 +24,41 @@ const CardID = ({ property }) => {
   };
   return (
     <div>
-      {property && (
-        <div className="title-slides">
-          <h1>{property.title}</h1>
-        </div>
-      )}
-      {property && <div className="location-slide">{property.location}</div>}
-      {property && property.tags && (
-        <div className="tag-container">
-          {property.tags.map((tag, index) => (
-            <div key={index} className="tag">
-              {tag}
-            </div>
-          ))}
-        </div>
-      )}
-      <div className="rightContainer">
-        {property && (
-          <div className="rating">{renderStars(property.rating)}</div>
-        )}
+      <div className="title-slides" >
+        <h1>{property.title}</h1>
+      </div>
+
+      <div className="container">
         <div className="host-slide">
           {property && property.host && (
             <div className="hostname">
-              {property.host.name}
-              <div className="piccontainer">
-                <img
-                  className="hostpic"
-                  src={property.host.picture}
-                  alt={property.host.name}
-                />
-              </div>
+             {property.host.name}
             </div>
+          )}
+          <img
+            className="hostpic"
+            src={property.host.picture}
+            alt={property.host.name}
+          />
+        </div>
+
+        {property && <div className="location-slide">{property.location}</div>}
+        {property && property.tags && (
+          <div className="tag-container">
+            {property.tags.map((tag, index) => (
+              <div key={index} className="tag">
+                {tag}
+              </div>
+            ))}
+          </div>
+        )}
+        <div className="rightContainer">
+          {property && (
+            <div className="rating">{renderStars(property.rating)}</div>
           )}
         </div>
       </div>
+
       <div className="CollapseID">
         <Collapse
           className="collapseItem"
@@ -78,9 +79,9 @@ const CardID = ({ property }) => {
           }
         />
       </div>
-      <Footer />
+
+   <div className="footerID">   <Footer /> </div>
     </div>
   );
 };
-
 export default CardID;
