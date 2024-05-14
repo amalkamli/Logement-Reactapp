@@ -10,12 +10,19 @@ const LogoNavigation = () => {
       <nav className="nav-links">
         <ul>
           <li>
-          <NavLink exact="true" to="/" activeclassname="active">
+            <NavLink
+              exact="true"
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               Accueil
             </NavLink>
           </li>
           <li>
-          <NavLink to="/about" activeclassname ="active">
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               À propos
             </NavLink>
           </li>

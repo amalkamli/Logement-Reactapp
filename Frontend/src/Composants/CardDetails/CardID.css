@@ -1,10 +1,8 @@
-
 .hostpic {
   border-radius: 90%;
   object-fit: cover;
   height: 50px;
   width: 50px;
-  
 }
 .host-slide {
   margin-top: -5%;
@@ -23,35 +21,64 @@
 }
 .CollapseID {
   display: flex;
+  justify-content: center;
   width: 100%;
   margin-top: 5%;
   margin-left: 0%;
   margin-bottom: 5%;
-  gap: 60px; 
+  gap: 60px;
 }
-.rating {
-  color: #ff6060;
+.collapseItem {
+  width: 50%;
+}
+.rightContainer {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  color: #ff6060;
   margin-right: 5%;
   height: 1px;
   font-size: 30px;
 }
+.collapseContainer {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .CollapseID {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 0px;
   }
+  .collapseContainer {
+    box-sizing: border-box;
+    margin: 13px;
+  }
+  .collapseItem {
+    margin-bottom: 5px;
+  }
+  .list-equipmnt {
+    padding: 0;
+    list-style: none;
+  }
+  .rightContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
   .rating {
-    justify-content: flex-start;
-    margin: 3%;
+    order: 1; /* Place le rating avant le host-slide */
   }
+
   .host-slide {
-    margin-top: 5%;
+    order: 2; /* Place le host-slide après le rating */
   }
 }
 @media (max-width: 1024px) {
   .footerID {
     margin-top: 10%;
+  }
+  .collapseContainer {
+    width: 100%;
   }
 }

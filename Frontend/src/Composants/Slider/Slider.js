@@ -26,19 +26,25 @@ const Slider = () => {
 
   // Fonction pour afficher l'image suivante
   const nextImage = () => {
-    if (property && property.pictures && currentImageIndex < property.pictures.length - 1) {
-      setCurrentImageIndex(currentImageIndex + 1);
+    if (property && property.pictures) {
+      setCurrentImageIndex((currentImageIndex) => {
+        if (currentImageIndex === property.pictures.length - 1) {
+          return 0; // Revenir à la première image si l'index courant est la dernière image
+        } else {
+          return currentImageIndex + 1; // Passer à l'image suivante normalement
+        }
+      });
     }
   };
+  
 
   // Fonction pour afficher l'image précédente
-
   const previousImage = () => {
     if (property && property.pictures) {
-      setCurrentImageIndex((currentImageIndex) => 
-        currentImageIndex === 0 ? property.pictures.length - 1 : currentImageIndex - 1);
+      setCurrentImageIndex((currentImageIndex) => currentImageIndex === 0 ? property.pictures.length - 1 : currentImageIndex - 1);
     }
   };
+  
   
   
   return (

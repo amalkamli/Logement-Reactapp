@@ -41,7 +41,6 @@ const PropertyDetails = () => {
   return (
     <div>
       <LogoNavigation />
-      {/* Render property details */}
       <>
         <Slider property={property} />
         <CardID property={property} />

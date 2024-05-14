@@ -3,14 +3,19 @@
   align-items: center;
   justify-content: space-between;
 }
-.nav-links {
-  top: 0;
-  right: 30px;
+.logo {
+  margin: 10px;
+  display: block;
+  width: 150px;
 }
+.nav-links {
+    margin-right: 5%;
+}
+
 .nav-links ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  
 }
 .nav-links ul li {
   display: inline-block;
@@ -19,6 +24,9 @@
 .nav-links ul li a {
     text-decoration: none;
     color: black;
+}
+.nav-links ul li a.active {
+  text-decoration: underline;
 }
 @media (max-width: 768px) {
 .logo {
