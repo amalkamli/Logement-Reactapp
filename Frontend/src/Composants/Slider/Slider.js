@@ -36,17 +36,12 @@ const Slider = () => {
       });
     }
   };
-  
-
   // Fonction pour afficher l'image précédente
   const previousImage = () => {
     if (property && property.pictures) {
       setCurrentImageIndex((currentImageIndex) => currentImageIndex === 0 ? property.pictures.length - 1 : currentImageIndex - 1);
     }
-  };
-  
-  
-  
+  }; 
   return (
     <div className="slideshow-Slidecontainer">
       {property && property.pictures && property.pictures.length > 1 && (

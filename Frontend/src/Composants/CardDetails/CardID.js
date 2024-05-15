@@ -24,35 +24,37 @@ const CardID = ({ property }) => {
   };
   return (
     <div>
-      <div className="title-slides" >
+      {/* /*   <div className="title-slides">
         <h1>{property.title}</h1>
-      </div>
+      </div>  */}
 
-      <div className="container">
-        <div className="host-slide">
-          {property && property.host && (
-            <div className="hostname">
-             {property.host.name}
+      <div className="Container">
+        <div className="leftContainer">
+          <h1>{property.title}</h1>
+          {property && (
+            <div className="location-slide">{property.location}</div>
+          )}
+          {property && property.tags && (
+            <div className="tag-container">
+              {property.tags.map((tag, index) => (
+                <div key={index} className="tag">
+                  {tag}
+                </div>
+              ))}
             </div>
           )}
-          <img
-            className="hostpic"
-            src={property.host.picture}
-            alt={property.host.name}
-          />
         </div>
-
-        {property && <div className="location-slide">{property.location}</div>}
-        {property && property.tags && (
-          <div className="tag-container">
-            {property.tags.map((tag, index) => (
-              <div key={index} className="tag">
-                {tag}
-              </div>
-            ))}
-          </div>
-        )}
         <div className="rightContainer">
+          <div className="host-slide">
+            {property && property.host && (
+              <div className="hostname">{property.host.name}</div>
+            )}
+            <img
+              className="hostpic"
+              src={property.host.picture}
+              alt={property.host.name}
+            />
+          </div>
           {property && (
             <div className="rating">{renderStars(property.rating)}</div>
           )}
@@ -80,7 +82,10 @@ const CardID = ({ property }) => {
         />
       </div>
 
-   <div className="footerID">   <Footer /> </div>
+      <div className="footerID">
+        {" "}
+        <Footer />{" "}
+      </div>
     </div>
   );
 };

@@ -4,8 +4,9 @@
 }
 .background-title {
   position: absolute; /* Position absolue pour placer le texte au centre */
-  top: 50%; /* Positionner le texte à 50% du haut du conteneur */
-  left: 50%; /* Positionner le texte à 50% de la gauche du conteneur */
+top: 50%;
+  margin-top: 0; 
+ left: 50%; /* Positionner le texte à 50% de la gauche du conteneur */
   transform: translate(
     -50%,
     -50%

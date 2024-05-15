@@ -42,8 +42,8 @@
 }
 .collapseContainer-about {
   width: 60%;
-  justify-content: center;
-  margin-left: 20%;
+  margin-left:auto;
+  margin-right: auto;
 }
 .collapseWrapper {
   margin-bottom: 30px;

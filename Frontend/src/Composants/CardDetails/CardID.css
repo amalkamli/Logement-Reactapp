@@ -5,8 +5,7 @@
   width: 50px;
 }
 .host-slide {
-  margin-top: -5%;
-  margin-right: 5%;
+ 
   align-items: center;
   display: flex;
   justify-content: flex-end;
@@ -22,9 +21,10 @@
 .CollapseID {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   margin-top: 5%;
-  margin-left: 0%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 5%;
   gap: 60px;
 }
@@ -34,20 +34,26 @@
 .rightContainer {
   display: flex;
   flex-direction: column;
+  gap: 10%;
   color: #ff6060;
   margin-right: 5%;
-  height: 1px;
-  font-size: 30px;
+ 
+  width: 40%;
+  padding-top: 1%;
+}
+.leftContainer {
+  width: 60%;
 }
 .collapseContainer {
   width: 100%;
 }
-
+.Container {
+  display: flex;
+}
 @media (max-width: 768px) {
   .CollapseID {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 0px;
   }
   .collapseContainer {
@@ -70,15 +76,23 @@
     order: 1; /* Place le rating avant le host-slide */
   }
 
-  .host-slide {
-    order: 2; /* Place le host-slide après le rating */
   }
-}
 @media (max-width: 1024px) {
   .footerID {
     margin-top: 10%;
   }
   .collapseContainer {
+    width: 100%;
+  }
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+  .rightContainer {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+  .leftContainer{
     width: 100%;
   }
 }
