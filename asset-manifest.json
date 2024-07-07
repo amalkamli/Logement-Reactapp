@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Logement-Reactapp/static/css/main.80440fe4.css",
+    "main.js": "/Logement-Reactapp/static/js/main.09ec0dc7.js",
+    "static/js/453.13cd223d.chunk.js": "/Logement-Reactapp/static/js/453.13cd223d.chunk.js",
+    "static/media/BackgroundAbout.png": "/Logement-Reactapp/static/media/BackgroundAbout.388a325a41a4341c7ba0.png",
+    "static/media/IMG.png": "/Logement-Reactapp/static/media/IMG.7548b2a7d4de41ae5d51.png",
+    "index.html": "/Logement-Reactapp/index.html",
+    "main.80440fe4.css.map": "/Logement-Reactapp/static/css/main.80440fe4.css.map",
+    "main.09ec0dc7.js.map": "/Logement-Reactapp/static/js/main.09ec0dc7.js.map",
+    "453.13cd223d.chunk.js.map": "/Logement-Reactapp/static/js/453.13cd223d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80440fe4.css",
+    "static/js/main.09ec0dc7.js"
+  ]
+}
